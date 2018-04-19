@@ -76,9 +76,7 @@ function letterGuess() {
                 if (userGuess.toUpperCase() === currentWord.letters[i].character.toUpperCase()) {
                     correct = true;
                 }
-            }
-
-            
+            }         
 
             if(correct===true){
                 console.log('');
@@ -104,6 +102,9 @@ function letterGuess() {
                     console.log(chalk.bgRed('* GAME OVER *'));
                     console.log(chalk.bgRed('*************'));  
                     console.log('');
+                    console.log('The correct response was: '+ current);
+                    console.log('');
+
                 inquirer.prompt([
                     {type: 'list',
                     choices: ['Yes','No'],
